@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTLMaze.REST", "src\RTLMaze.REST\RTLMaze.REST.csproj", "{BE30AFA4-3E68-4840-B5BC-8EE0B4EBDE4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTLMaze.Core", "src\RTLMaze.Core\RTLMaze.Core.csproj", "{3D89F9EA-C180-4DBF-9611-3B08524337D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTLMaze.Models", "src\RTLMaze.Models\RTLMaze.Models.csproj", "{827B6F4F-CFCC-47B4-94BB-172402EFA7AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE30AFA4-3E68-4840-B5BC-8EE0B4EBDE4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE30AFA4-3E68-4840-B5BC-8EE0B4EBDE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE30AFA4-3E68-4840-B5BC-8EE0B4EBDE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE30AFA4-3E68-4840-B5BC-8EE0B4EBDE4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D89F9EA-C180-4DBF-9611-3B08524337D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D89F9EA-C180-4DBF-9611-3B08524337D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D89F9EA-C180-4DBF-9611-3B08524337D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D89F9EA-C180-4DBF-9611-3B08524337D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{827B6F4F-CFCC-47B4-94BB-172402EFA7AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{827B6F4F-CFCC-47B4-94BB-172402EFA7AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{827B6F4F-CFCC-47B4-94BB-172402EFA7AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{827B6F4F-CFCC-47B4-94BB-172402EFA7AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
