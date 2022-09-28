@@ -18,6 +18,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddRouting( opt => opt.LowercaseUrls = true ); 
 
+// Register our mapping service
+builder.Services.AddAutoMapper( typeof( Program ) );
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
