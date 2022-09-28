@@ -2,7 +2,7 @@ using AutoMapper;
 using RTLMaze.Models;
 using RTLMaze.REST.Dto;
 
-namespace RTLMaze.REST.Extensions;
+namespace RTLMaze.REST.Configuration;
 
 public class ProfileMapper : Profile
 {
