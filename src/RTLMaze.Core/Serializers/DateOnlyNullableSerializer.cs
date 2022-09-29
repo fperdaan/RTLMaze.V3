@@ -5,7 +5,7 @@ namespace RTLMaze.Core.Serializers;
 
 public class DateOnlyNullableSerializer : JsonConverter<DateOnly?>
 {
-	private const string DATE_FORMAT = "yyyy-MM-dd";
+	public const string DATE_FORMAT = "yyyy-MM-dd";
 	
 	public override DateOnly? Read( ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options )
 	{
