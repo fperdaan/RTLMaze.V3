@@ -1,12 +1,13 @@
 using System.Net;
 using System.Text.Json.Serialization;
+using Microsoft.OpenApi.Any;
 
 namespace RTLMaze.REST;
 
 public partial class ResponseWrapper<T> where T : class
 {
 	# region Props
-	
+
 	public int StatusCode { get; }
 	private T? _data { get;  }
 
