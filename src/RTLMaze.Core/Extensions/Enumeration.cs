@@ -2,9 +2,12 @@ namespace RTLMaze.Core;
 
 public static class EnumerationExtensions
 {
-	public static void ForEach<T>(  this IEnumerable<T> source, Action<T> action )
+	public static IEnumerable<T> ForEach<T>(  this IEnumerable<T> source, Action<T> action )
 	{
-		foreach ( var item in source )
+		var sourceList = source.ToList();
+		foreach ( var item in sourceList )
 			action( item );
+
+		return sourceList;
 	}
 }
