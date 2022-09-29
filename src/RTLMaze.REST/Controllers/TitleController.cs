@@ -22,7 +22,7 @@ public class TitleController : ControllerBase
 	}
 	
 	[HttpGet, Route("")]
-	[Produces(typeof(IAsyncEnumerable<TitleDto>))]
+	[Produces(typeof(ResponseWrapper<IAsyncEnumerable<TitleDto>>))]
 	public IActionResult List()
 	{
 		var items = _repository

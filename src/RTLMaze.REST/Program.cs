@@ -20,6 +20,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen( c =>
 {
 	c.SchemaFilter<SchemaBehaviourFilter>();
+	c.SchemaFilter<SchemaNameFilter>();
+
+	//c.CustomSchemaIds( modelType => { });
+	
 	c.MapType<DateOnly>(() => new OpenApiSchema { 
 		Type = "string",
 		Pattern = DateOnlyNullableSerializer.DATE_FORMAT,

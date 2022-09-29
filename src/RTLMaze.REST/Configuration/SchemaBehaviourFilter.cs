@@ -8,9 +8,9 @@ using RTLMaze.Core;
 
 namespace RTLMaze.REST.Configuration;
 
-public class SchemaBehaviourFilter : ISchemaFilter
+public partial class SchemaBehaviourFilter : ISchemaFilter
 {
-	public void Apply( OpenApiSchema schema, SchemaFilterContext context )
+	public virtual void Apply( OpenApiSchema schema, SchemaFilterContext context )
 	{
 		if ( schema?.Properties == null )
 			return;
