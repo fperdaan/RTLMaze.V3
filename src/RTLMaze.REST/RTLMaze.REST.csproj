@@ -8,12 +8,18 @@
 
     <ItemGroup>
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.9" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\RTLMaze.Core\RTLMaze.Core.csproj" />
+      <ProjectReference Include="..\RTLMaze.DAL\RTLMaze.DAL.csproj" />
       <ProjectReference Include="..\RTLMaze.Models\RTLMaze.Models.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Models" />
     </ItemGroup>
 
 </Project>

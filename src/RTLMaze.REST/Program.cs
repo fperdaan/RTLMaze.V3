@@ -1,4 +1,7 @@
+using Microsoft.OpenApi.Any;
+using Microsoft.OpenApi.Models;
 using RTLMaze.Core.Serializers;
+using RTLMaze.REST.Configuration;
 
 var builder = WebApplication.CreateBuilder( args );
 
@@ -14,9 +17,22 @@ mvcBuilder.AddJsonOptions( opt =>
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen( c =>
+{
+	c.SchemaFilter<SchemaBehaviourFilter>();
+	c.MapType<DateOnly>(() => new OpenApiSchema { 
+		Type = "string",
+		Pattern = DateOnlyNullableSerializer.DATE_FORMAT,
+		Example = new OpenApiString( DateOnly.FromDateTime( DateTime.Now ).ToString( DateOnlyNullableSerializer.DATE_FORMAT ) )
+	});
+});
 
-builder.Services.AddRouting( opt => opt.LowercaseUrls = true ); 
+builder.Services.AddRouting( opt => opt.LowercaseUrls = true );
+
+builder.Services.AddControllers( options => 
+{
+ 	options.Filters.Add<ResponseActionHandler>();
+});
 
 // Register our mapping service
 builder.Services.AddAutoMapper( typeof( Program ) );
@@ -24,7 +40,7 @@ builder.Services.AddAutoMapper( typeof( Program ) );
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if ( app.Environment.IsDevelopment() )
+//if ( app.Environment.IsDevelopment() )
 {
 	app.UseSwagger();
 	app.UseSwaggerUI();
